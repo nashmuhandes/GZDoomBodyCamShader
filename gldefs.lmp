@@ -1,0 +1,11 @@
+HardwareShader PostProcess Scene
+{
+	Name "fisheyeshader"
+	Shader "shaders/PostProcess/fisheye.fp" 330
+}
+
+HardwareShader PostProcess Scene
+{
+	Name "bloomshader"
+	Shader "shaders/PostProcess/bloom.fp" 330
+}

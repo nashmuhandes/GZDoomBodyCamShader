@@ -1,0 +1,12 @@
+class FishEyePostProcessHandler : StaticEventHandler
+{
+	override void RenderOverlay(RenderEvent e)
+	{
+		FishEye(e);
+	}
+
+	ui void FishEye(RenderEvent e)
+	{
+		PPShader.SetEnabled("fisheyeshader", true);
+	}
+}

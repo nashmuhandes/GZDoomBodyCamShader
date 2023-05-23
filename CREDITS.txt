@@ -1,0 +1,7 @@
+Fisheye shader from ShaderToy user jcant0n - https://www.shadertoy.com/view/4sSSzz
+
+GZDoom shader conversion by Nash Muhandes
+
+WARNING: ShaderToy shaders have a non-commercial license by default.
+Don't think about using this for your commercial game. You'll have to
+rewrite the .fp file yourself if that's your intention.
