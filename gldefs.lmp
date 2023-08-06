@@ -2,6 +2,8 @@ HardwareShader PostProcess Scene
 {
 	Name "fisheyeshader"
 	Shader "shaders/PostProcess/fisheye.fp" 330
+	Uniform float strength
+	Uniform int chromo
 }
 
 HardwareShader PostProcess Scene
