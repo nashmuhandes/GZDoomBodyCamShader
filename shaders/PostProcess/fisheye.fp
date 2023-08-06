@@ -6,15 +6,11 @@
 // Fisheye effect strength - higher number means more intense effect
 #define FISHEYE_EFFECT_STRENGTH 0.0452
 
-vec2 texSize;
-float aspectRatio;
-vec4 color;
-
 void main(void)
 {
-	texSize = vec2(textureSize(InputTexture, 0));
+	vec2 texSize = vec2(textureSize(InputTexture, 0));
 	vec2 uv = TexCoord.xy;
-	aspectRatio = texSize.x / texSize.y;
+	float aspectRatio = texSize.x / texSize.y;
 	float strength = FISHEYE_EFFECT_STRENGTH;
 
 	vec2 intensity = vec2(strength * aspectRatio, strength * aspectRatio);
@@ -26,7 +22,7 @@ void main(void)
 	realCoordOffs.x = (1.0 - coords.y * coords.y) * intensity.y * (coords.x);
 	realCoordOffs.y = (1.0 - coords.x * coords.x) * intensity.x * (coords.y);
 
-	color = texture(InputTexture, uv - realCoordOffs);
+	vec4 color = texture(InputTexture, uv - realCoordOffs);
 
 #if DO_CHROMO
 	float chromo_x = 0.044;
