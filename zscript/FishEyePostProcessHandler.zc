@@ -7,6 +7,24 @@ class FishEyePostProcessHandler : StaticEventHandler
 
 	ui void FishEye(RenderEvent e)
 	{
-		PPShader.SetEnabled("fisheyeshader", true);
+		PlayerInfo	plr = players[consoleplayer];
+		
+		if(plr && plr.mo && CVar.GetCVar("fisheye_enabled", plr).GetBool())
+		{
+			float strength_val;
+			bool chromatic_val;
+			
+			strength_val = CVar.GetCvar("fisheye_strength", plr).GetFloat();
+			chromatic_val = CVar.GetCvar("fisheye_chromatic", plr).GetBool();
+			
+			PPShader.SetUniform1f("fisheyeshader", "strength", strength_val);
+			PPShader.SetUniform1i("fisheyeshader", "chromo", chromatic_val);
+			
+			PPShader.SetEnabled("fisheyeshader", true);
+		}
+		else if(plr && plr.mo)
+		{
+			PPShader.SetEnabled("fisheyeshader", false);
+		}
 	}
 }
