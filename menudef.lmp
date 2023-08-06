@@ -1,0 +1,12 @@
+AddOptionMenu "OptionsMenu"
+{
+		StaticText "$FISHEYE_PP"
+		
+		StaticText " "
+		
+		Option "$FISHEYE_ENABLE", "fisheye_enabled", "YesNo"
+		
+		Option "$FISHEYE_CHROMATIC", "fisheye_chromatic", "YesNo", "fisheye_enabled"
+		
+		Slider "$FISHEYE_STRENGTH", "fisheye_strength", 0.0001, 0.1, 0.0005, 4, "fisheye_enabled"
+}

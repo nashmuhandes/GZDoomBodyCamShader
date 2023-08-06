@@ -1,0 +1,7 @@
+[enu default]
+
+FISHEYE_PP = "Fisheye Post Process";
+
+FISHEYE_ENABLE = "Enable Fisheye Shader";
+FISHEYE_CHROMATIC = "Enable Chromatic Aberration";
+FISHEYE_STRENGTH = "Effect Strength";
