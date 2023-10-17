@@ -1,6 +1,7 @@
 Fisheye shader from ShaderToy user jcant0n - https://www.shadertoy.com/view/4sSSzz
 
 GZDoom shader conversion by Nash Muhandes
+Menu options and GLES 3.2 compatibility by generic name guy
 
 WARNING: ShaderToy shaders have a non-commercial license by default.
 Don't think about using this for your commercial game. You'll have to
